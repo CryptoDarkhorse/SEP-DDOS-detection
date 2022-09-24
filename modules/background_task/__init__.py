@@ -65,8 +65,8 @@ def spawn_threads(mongo_res):
         for lst in interval_list:
             data = get_data_in_interval(mongo_res, lst[0], lst[1])
             data_list1.append(get_result_table(data))
-        print("Interval list: ", interval_list)
-        print("Data list1: ", data_list1)
+        # print("Interval list: ", interval_list)
+        # print("Data list1: ", data_list1)
 
         var_thread = Thread(target=variance_method, args=(data_list1,))
         var_thread.daemon = True
@@ -98,7 +98,9 @@ def task():
         scheduler.start()
         atexit.register(lambda: scheduler.shutdown())
     except Exception as e:
-        pass
+        print("Error in task function")
+        print(e)
+
 
 
 if __name__ == "__main__":

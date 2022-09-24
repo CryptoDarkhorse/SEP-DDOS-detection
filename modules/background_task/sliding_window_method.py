@@ -68,7 +68,7 @@ def algorithm(data_list, avg_val):
             beta -= 1
 
         if D_i >= omega:
-            print("Detected")
+            print("******************  Detected  ******************")
         omega = beta * std_dev
     print("Beta:", beta)
     print("Omega:", omega)
@@ -76,7 +76,7 @@ def algorithm(data_list, avg_val):
 
 def sliding_window(data):
     entropy = cal_entropy_per_window(data)
-    print("Entropy: ", entropy)
+    # print("Entropy: ", entropy)
     avr = average(entropy)
     print("Avg:", avr)
     st_dev = cal_std_deviation(entropy, avr)

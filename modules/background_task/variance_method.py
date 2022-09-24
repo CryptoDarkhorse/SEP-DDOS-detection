@@ -88,8 +88,8 @@ def variance_method(data):
     print("Entropy: ", entropy)
     avg_lst = cal_average_entropy_for_each_conn(entropy)
     var = cal_variance(entropy, avg_lst)
-    print("Avg: ", avg_lst)
-    print("Var: ", var)
+    # print("Avg: ", avg_lst)
+    # print("Var: ", var)
     print("Results: ", find_possibles(var, data))
 
 
